@@ -1,0 +1,29 @@
+package gag;
+
+public interface IUser {
+	void addComment(Content content, String comment);
+	void deleteComment(int index);
+	void changeName();
+	void changeUsername();
+
+	
+	/*@Override
+	public int countComments() {
+		return numberOfComments;
+	}
+	
+	@Override
+	public void addComment(Comment newComment) {
+		comments.add(newComment);
+		this.numberOfComments++;
+
+	}
+
+	@Override
+	public void deleteComment(int index) {
+		comments.remove(index);
+		this.numberOfComments--;
+
+	}*/
+
+}

@@ -1,0 +1,12 @@
+package gag;
+
+import java.util.ArrayList;
+
+public class User {
+	private Accaunt  acc;
+	private ArrayList<Content> contents;
+	private ArrayList<Comment> comments;
+	
+	
+
+}

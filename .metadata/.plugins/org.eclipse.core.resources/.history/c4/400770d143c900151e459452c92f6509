@@ -1,0 +1,92 @@
+package gag;
+
+import java.util.ArrayList;
+
+public class Content implements  IPoints {
+	
+	
+	private Category myCategory;
+	private int points;
+	private String description;
+	private ArrayList<Comment> comments = new ArrayList();
+	private int numberOfComments;
+
+	public Content(Category myCategory) {
+		this.points = 0;
+		this.setDescription(" ");
+		this.setNumberOfComments(0);
+		this.setMyCategory(myCategory);
+
+	}
+
+	public Content(Category myCategory,String description) {
+		this(myCategory);
+		this.setDescription(description);
+
+	}
+	
+
+	public int getPoints() {
+		return points;
+	}
+
+	private void setPoints(int points) {
+		this.points = points;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	private void setDescription(String description) {
+		if (description != null) {
+			this.description = description;
+		} else {
+			this.description = " ";
+		}
+	}
+
+	public Category getMyCategory() {
+		return myCategory;
+	}
+
+	public void setMyCategory(Category myCategory) {
+		this.myCategory = myCategory;
+	}
+	
+	public void createContent(Category myCategory){
+		
+	}
+
+	
+
+	@Override
+	public void pointsUp() {
+		this.setPoints(points + 1);
+
+	}
+
+	@Override
+	public void pointsDown() {
+		this.setPoints(points - 1);
+
+	}
+
+	public ArrayList<Comment> getComments() {
+		return comments;
+	}
+
+	public void addComments(String comments) {
+		Comment temp=new Comment(comments);
+		this.comments.add(temp);
+		this.setNumberOfComments(this.getNumberOfComments() + 1);
+	}
+
+	public int getNumberOfComments() {
+		return numberOfComments;
+	}
+	
+	
+
+	
+}

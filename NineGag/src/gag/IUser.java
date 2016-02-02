@@ -1,30 +1,14 @@
 package gag;
 
 public interface IUser {
-	int countComments();
-	void addComment(Comment newComment);
+	void addComment(Content content, String comment);
 	void deleteComment(int index);
-	void changeName();
-	void changeUsername();
+	void changeName(String name);
+	void changeUsername(String userName);
+	void setGender(boolean isFemale);
+	void setCountry(Country country);
+	void changePassWord(String passWord);
+	void addContent(String description);
 
-	
-	/*@Override
-	public int countComments() {
-		return numberOfComments;
-	}
-	
-	@Override
-	public void addComment(Comment newComment) {
-		comments.add(newComment);
-		this.numberOfComments++;
-
-	}
-
-	@Override
-	public void deleteComment(int index) {
-		comments.remove(index);
-		this.numberOfComments--;
-
-	}*/
 
 }

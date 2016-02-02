@@ -1,0 +1,9 @@
+package gag;
+
+public class User {
+	private Accaunt  acc;
+//	private ArrayList() contents;
+	
+	
+
+}

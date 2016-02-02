@@ -13,7 +13,7 @@ public class Accaunt {
 	private int year;
 	private int month;
 	private int day;
-	private String countryOfTheAccount;
+	private Country country;
 	private StringBuilder tellPeopleWhoYouAre;
 	private final static String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 	private static ArrayList<Country> countries = new ArrayList<Country>(205);
@@ -238,10 +238,10 @@ public class Accaunt {
 	}
 
 	public void setYourName(String yourName) {
-		if (yourName!=null&&yourName.length()>0) {
+		if (yourName != null && yourName.length() > 0) {
 			this.yourName = yourName;
 		}
-		
+
 	}
 
 	public boolean isFemale() {
@@ -357,8 +357,16 @@ public class Accaunt {
 				+ ", passWord=" + passWord + ", yourName=" + yourName
 				+ ", isFemale=" + isFemale + ", year=" + year + ", month="
 				+ month + ", day=" + day + ", countryOfTheAccount="
-				+ countryOfTheAccount + ", tellPeopleWhoYouAre="
+				+ country + ", tellPeopleWhoYouAre="
 				+ tellPeopleWhoYouAre + "]";
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 
 }
