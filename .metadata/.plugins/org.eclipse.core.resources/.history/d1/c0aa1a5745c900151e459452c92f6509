@@ -1,0 +1,39 @@
+package gag;
+
+import java.util.ArrayList;
+
+public class User implements IUser {
+	private Accaunt acc;
+	private ArrayList<Content> contents;
+	private ArrayList<Comment> comments;
+
+	@Override
+	public void deleteComment(int index) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	@Override
+	public void addComment(Content content, String text) {
+		Comment temp = new Comment(text);
+		temp.setCommenter(this);
+		content.addComments(temp);
+
+	}
+
+
+	@Override
+	public void changeName(String name) {
+		acc.setYourName(name);
+		
+	}
+
+
+	@Override
+	public void changeUsername(String userName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -3,8 +3,9 @@ package gag;
 import java.util.ArrayList;
 
 public class Content implements  IPoints {
+	
+	
 	private Category myCategory;
-
 	private int points;
 	private String description;
 	private ArrayList<Comment> comments = new ArrayList();
@@ -13,7 +14,7 @@ public class Content implements  IPoints {
 	public Content(Category myCategory) {
 		this.points = 0;
 		this.setDescription(" ");
-		this.numberOfComments = 0;
+		this.numberOfComments=0;
 		this.setMyCategory(myCategory);
 
 	}
@@ -70,6 +71,27 @@ public class Content implements  IPoints {
 		this.setPoints(points - 1);
 
 	}
+
+	public ArrayList<Comment> getComments() {
+		return comments;
+	}
+
+	public void addComments(Comment comment) {
+		
+		this.comments.add(comment);
+		this.numberOfComments++;
+	}
+
+	public void deleteComment(int index) {
+		comments.remove(index);
+		this.numberOfComments--;
+
+	}
+	public int getNumberOfComments() {
+		return numberOfComments;
+	}
+	
+	
 
 	
 }
